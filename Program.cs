@@ -32,7 +32,7 @@ namespace Aula1
                 resultado = n1 / n2;
             } else
             {
-                Console.WriteLine("Nao reconheco esse comando!");
+                Console.WriteLine("Nao reconheco esse comando!!");
             }
 
             Console.WriteLine(resultado);
