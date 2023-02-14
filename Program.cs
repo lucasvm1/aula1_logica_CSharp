@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Aula1
 {
@@ -6,40 +7,19 @@ namespace Aula1
     {
         static void Main(string[] args)
         {
-            double n1, n2;
-            double resultado = 0;
-            string sinal;
+            double dolar = 5.32;
 
-            Console.WriteLine("Digite o primeiro número");
-            n1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Digite o segundo número");
-            n2 = Convert.ToInt32(Console.ReadLine());
+            double real;
+            double conversao;
 
-            Console.WriteLine("Qual função deseja realizar?");
+            Console.WriteLine("Quantos reais deseja doar?");
+            real = Convert.ToDouble(Console.ReadLine());
 
-            sinal = Console.ReadLine();
+            conversao = real / dolar;
 
-            if (sinal == "+")
-            {
-                resultado = n1 + n2;
-            } else if (sinal == "-") {
-                resultado = n1 - n2;
-            } else if (sinal == "*")
-            {
-                resultado = n1 * n2;
-            } else if (sinal == "/")
-            {
-                resultado = n1 / n2;
-            } else
-            {
-                Console.WriteLine("Não reconheço esse comando!");
-            }
+            Console.WriteLine("Você terá doado: $" + conversao.ToString("N2"));
 
-            Console.WriteLine(resultado);
 
-            
-
-                
         }
     }
 }
